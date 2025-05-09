@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Amirthavarsini</title>
+    <link rel="stylesheet" href="C:\Users\Amirthavarsini V S\OneDrive\Desktop\newportfolio\css\front.css">
+    <style>
+        /* Making text larger */
+        h1 {
+            font-size: 48px; /* Larger heading */
+            font-weight: bold;
+        }
+
+        .contact-info p {
+            font-size: 24px; /* Increase paragraph text size */
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            font-size: 22px; /* Increase link text size */
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Sidebar buttons bigger */
+        .sidebar ul li button {
+            font-size: 22px; 
+            padding: 10px 20px;
+            width: 100%;
+            border: none;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .sidebar ul li button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><button onclick="navigateTo('index.html')">Home</button></li>
+            <li><button onclick="navigateTo('about.html')">About</button></li>
+            <li><button onclick="navigateTo('resume.html')">Resume</button></li>
+            <li><button onclick="navigateTo('skills.html')">Skills</button></li>
+            <li><button onclick="navigateTo('projects.html')">Projects</button></li>
+            <li><button onclick="navigateTo('contact.html')">Contact</button></li>
+        </ul>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h1>LinkUp 📡</h1>
+        
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +91 8072709479</p>
+            <p><strong>Email:</strong> <a href="mailto:amirthavarsini13@gmail.com">amirthavarsini13@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/amirthavarsini/" target="_blank">https://www.linkedin.com/in/amirthavarsini/</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Amirthavarsini13" target="_blank"></a>https://github.com/Amirthavarsini13</p>
+        </div>
+        
+    </section>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+            closeMenu();
+        }
+
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

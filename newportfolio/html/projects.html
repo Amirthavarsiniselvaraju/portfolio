@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Endeavors 🚀🔥</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #4CAF50);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            left: -250px; /* Initially hidden */
+            top: 0;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding-top: 20px;
+            transition: 0.3s;
+            z-index: 1002; /* Ensure it's above the content */
+        }
+
+        .sidebar.open {
+            left: 0; /* Move the sidebar in when open */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar ul li a {
+            color: rgb(252, 249, 249);
+            text-decoration: none;
+            display: block;
+        }
+
+        .sidebar ul li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            cursor: pointer;
+            z-index: 1003;
+            background: rgb(11, 11, 11);
+            color: rgb(246, 245, 245);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Main Container */
+        .main-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            width: 90%;
+            flex-direction: column;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            display: flex;
+            flex-direction: row; /* Align projects horizontally */
+            gap: 20px;
+            overflow-x: auto; /* Allows scrolling if needed */
+            padding: 10px;
+            white-space: nowrap;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .project-card {
+            min-width: 300px;
+            padding: 15px;
+            background: linear-gradient(135deg, #ffcc00, #ff5733);
+            color: black;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: left;
+            white-space: normal;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .project-title {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .project-desc {
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .projects-container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        <!-- Projects Section -->
+        <div class="projects-container">
+            <div class="project-card">
+                <h3 class="project-title">Freelancing Platform</h3>
+                <p class="project-desc">A job marketplace that connects freelancers with clients. Features include AI-based recommendations and an escrow payment system.</p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Personal Finance Tracker</h3>
+                <p class="project-desc">A full-stack app using React.js & Node.js to track income, expenses, and savings, featuring data visualization and budgeting tools.</p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Women Safety Platform</h3>
+                <p class="project-desc">A platform for NGOs to provide safety resources and assistance to women, using AI and real-time analytics.</p>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Brand Mention Forecasting</h3>
+                <p class="project-desc">A social media monitoring tool using IBM SPSS Modeler to predict brand mentions and trends.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>

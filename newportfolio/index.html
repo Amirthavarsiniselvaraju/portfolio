@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio | Amirthavarsini</title>
+    <link rel="stylesheet" href="C:\Users\Amirthavarsini V S\OneDrive\Desktop\newportfolio\css\front.css">
+    <style>
+        .profile-picture {
+            width: 150px; /* Adjust size as needed */
+            height: 150px;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image fits well */
+            display: block;
+            margin: 20px auto; /* Centers the image */
+            border: 4px solid #fff; /* Optional: Adds a border */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><button onclick="navigateTo('index.html')">Home</button></li>
+            <li><button onclick="navigateTo('html/about.html')">About</button></li>
+            <li><button onclick="navigateTo('html/resume.html')">Resume</button></li>
+            <li><button onclick="navigateTo('html/skills.html')">Skills</button></li>
+            <li><button onclick="navigateTo('html/projects.html')">Projects</button></li>
+            <li><button onclick="navigateTo('html/contact.html')">Contact</button></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <img src="C:\Users\Amirthavarsini V S\OneDrive\Desktop\newportfolio\profile.jpg" alt="Amirthavarsini Profile Picture" class="profile-picture">
+        <h1>Amirthavarsini Selvaraju</h1>
+        <p class="role">
+            <span id="role-text"></span>
+        </p>
+    </header>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page; // Navigate to the selected page
+            closeMenu(); // Close the sidebar after clicking a button
+        }
+
+        function showResume() {
+            // Opens the resume in a new tab
+            window.open('C:/Users/Amirthavarsini V S/OneDrive/Desktop/newportfolio/images/resume.png', '_blank');
+        }
+
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.style.width = sidebar.style.width === "250px" ? "0" : "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+
+    <script src="C:\Users\Amirthavarsini V S\OneDrive\Desktop\newportfolio\js\front.js"></script>
+
+</body>
+</html>

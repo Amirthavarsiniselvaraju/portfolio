@@ -1,0 +1,83 @@
+/* Full Page Background with Animated Mixed Colors */
+body {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #4CAF50);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: rgb(11, 11, 11); 
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 30px;
+    text-align: center;
+}
+
+/* Adjust sidebar width when opened */
+.sidebar.open {
+    width: 200px;
+}
+
+/* Sidebar Buttons */
+.sidebar button {
+    display: block;
+    width: 65%;
+    margin: 6px auto;
+    padding: 8px;
+    background: rgba(9, 9, 9, 0.2);
+    color: rgb(253, 248, 248);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.sidebar button:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    z-index: 100;
+    color: rgb(248, 241, 241);
+    background: rgb(12, 12, 12);
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    font-family: 'Pacifico', cursive;
+}

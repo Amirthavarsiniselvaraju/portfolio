@@ -1,0 +1,149 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    color: white;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Menu Icon */
+.menu-icon {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 1003; /* Ensure it's clickable */
+    transition: 0.3s;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    height: 100%;
+    width: 0;  /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    overflow-x: hidden;
+    padding-top: 20px;
+    transition: 0.3s;
+    z-index: 1002; /* Keep above other content */
+}
+
+/* When sidebar is open */
+.sidebar.open {
+    width: 250px; /* Expand sidebar */
+}
+
+/* Sidebar List */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+/* Sidebar Links */
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+    position: relative;
+    z-index: 1; /* Prevent overlapping with sidebar */
+}
+
+/* About Container */
+.container {
+    width: 60%;
+    max-width: 600px;
+    text-align: left;
+    background: linear-gradient(135deg, #ffcc00, #ff5733);
+    background-size: 300% 300%;
+    animation: containerBG 8s ease infinite;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    font-family: 'Pacifico', cursive;
+
+    /* Make Bitmoji Position Relative to This */
+    position: relative;
+
+    /* Falling Effect */
+    transform: translateY(-80px);
+    opacity: 0;
+    animation: dropIn 1s ease-out forwards, containerBG 8s ease infinite;
+}
+
+/* Bitmoji Styling - Positioned on Top Left of About Container */
+.bitmoji {
+    width: 100px;  /* Adjusted size */
+    position: absolute;
+    top: -40px;    /* Moves above the container */
+    left: 20px;    /* Aligns with the left side of the container */
+}
+
+/* Animated Container Background */
+@keyframes containerBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Falling Animation */
+@keyframes dropIn {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Headings */
+h1 {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 16px;
+    color: #060606;
+    line-height: 1.5;
+}
